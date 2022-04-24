@@ -15,3 +15,4 @@ CREATE TABLE sport_classes (
     duration INT,
     member_id SERIAL REFERENCES members(id)
     );
+

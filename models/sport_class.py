@@ -1,4 +1,4 @@
-class Class:
+class Sport_class:
     def __init__(self, name, date, duration, id=None):
         self.name = name
         self.date = date

@@ -1,8 +1,8 @@
 class Member:
-    def __init__(self,name, age, adress, phone_number, id=None):
+    def __init__(self, name, age, address, phone_number, id=None):
         self.name = name
         self.age = age
-        self. adress = adress
+        self.address = address
         self.phone_number = phone_number
         self.id = id
     

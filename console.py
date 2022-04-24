@@ -1,13 +1,18 @@
 import pdb
 
+from models.booking_list import Booking_list
+import repositories.booking_list_repository as booking_list_repository
+
 from models.sport_class import Sport_class
 import repositories.sport_class_repository as sport_class_repository
 
 from models.member import Member
 import repositories.member_repository as member_repository
 
+booking_list_repository.select_all()
 sport_class_repository.select_all()
 member_repository.select_all
+
 
 member_1 = Member("Michael Robinson", 40, "4 Hannover Street", "0799678567")
 member_repository.save(member_1)
@@ -38,5 +43,11 @@ sport_class_repository.save(sport_class_4)
 
 sport_class_5 = Sport_class("Yoga", "01/05/2022", 50 )
 sport_class_repository.save(sport_class_5)
+
+booking_list_1 = Booking_list(member_2, sport_class_3)
+booking_list_repository.save(booking_list_1)
+
+booking_list_2 = Booking_list(member_5, sport_class_5)
+booking_list_repository.save(booking_list_2)
 
 

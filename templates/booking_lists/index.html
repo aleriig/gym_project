@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Booking list</h2>
+
+{% for booking_list in booking_lists %}
+
+<section>
+    <h5>Member:{{ booking_list.member.id }}, Sport class:{{ booking_list.sport_class.id }}</h5>
+    <a href="/booking_lists/{{ booking_list.id }}/edit">Edit</a>
+    <form action="/booking_lists/{{ booking_list.id }}"></form>
+</section>
+
+{% endfor %}
+{% endblock %}

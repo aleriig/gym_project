@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Edit a member</h2>
+<h2>Update a member</h2>
 
 <form action="/members/{{ member.id }}" method="POST">
     <div>
@@ -11,15 +11,15 @@
         </div>
         <div>
             <label for="age">Age:</label>
-            <input type="number" id="age" age="age" value="{{ member.age}}">
+            <input type="number" id="age" name="age" value="{{ member.age}}">
         </div>
         <div>
             <label for="address">Adress:</label>
-            <input type="text" id="address" address="address" value="{{ member.address }}">
+            <input type="text" id="address" name="address" value="{{ member.address }}">
         </div>
         <div>
             <label for="phone_number">Phone number:</label>
-            <input type="number" id="phone_number" phone_number="phone_number" value="{{ phone_number }}">
+            <input type="number" id="phone_number" name="phone_number" value="{{ member.phone_number }}">
         </div>
         <div>
             <input type="submit">

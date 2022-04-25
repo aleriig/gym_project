@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Add new sport class</h2>
+
+<form action="/sport_classes" method="POST">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+    </div>
+    <div>
+        <label for="date">Date:</label>
+        <input type="text" id="date" name="date">
+    </div>
+    <div>
+        <label for="duration">Duration:</label>
+        <input type="text" id="duration" name="duration">
+    </div>
+    <div>
+        <input type="submit">
+    </div>
+</form>
+
+{% endblock %}

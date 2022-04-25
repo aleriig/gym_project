@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Members</h2>
+
+{% for member in members %}
+
+<section>
+    <p>{{ member.name }}</p>
+    <a href="/members/{{ member.id }}/edit"></a>
+    <form action="/members/{{ member.id }}"></form>
+</section>
+
+{% endfor %}
+{% endblock %}

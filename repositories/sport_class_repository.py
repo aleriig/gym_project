@@ -26,3 +26,8 @@ def select(id):
     result = run_sql(sql,values)[0]
     sport_class = Sport_class(result["name"], result["date"], result["duration"])
     return sport_class
+
+def update(sport_class):
+    sql = "UPDATE sport_classes SET (name, date, duration) = (%s, %s, %s) WHERE id = %s"
+    values = [sport_class.name, sport_class.date, sport_class.duration, sport_class.id]
+    run_sql(sql, values)

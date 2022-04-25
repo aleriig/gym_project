@@ -28,3 +28,20 @@ def create_booking():
     new_booking = Booking_list(member, sport_class)
     booking_list_repository.save(new_booking)
     return redirect("/booking_lists")
+
+@booking_lists_blueprint.route("/booking_lists/<id>/edit")
+def edit_booking(id):
+    booking_list = booking_list_repository.select(id)
+    members = member_repository.select_all()
+    sport_classes = sport_class_repository.select_all()
+    return render_template("/booking_lists/edit.html", booking_list=booking_list, members=members, sport_classes=sport_classes)
+
+@booking_lists_blueprint.route("/booking_lists/<id>", methods=["POST"])
+def update_booking(id):
+    member_id = request.form['member_id']
+    sport_class_id = request.form["sport_class_id"]
+    member = member_repository.select(member_id)
+    sport_class = sport_class_repository.select(sport_class_id)
+    booking = Booking_list(member, sport_class, id)
+    booking_list_repository.update(booking)
+    return redirect("/booking_lists")

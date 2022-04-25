@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Update a Booking</h2>
+
+<form action="/booking_lists/{{ booking_list.id }}" method="POST">
+    <div>
+        <div>
+            <label for="member">Member</label>
+            <select name="member_id" id="member">
+                {% for member in members %}
+                <option value="{{ member.id }}"
+                 {% if member.id == booking_list.member.id %} selected {% endif %}>
+                    {{ member.name }}
+                </option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="sport_class">Sport class</label>
+            <select name="sport_class_id" id="sport_class">
+                {% for sport_class in sport_classes %}
+                <option value="{{ sport_class.id }}"
+                 {% if sport_class.id == booking_list.sport_class.id %} selected {% endif %}>
+                    {{ sport_class.name }}
+                </option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <input type="submit">
+        </div>
+    </div>
+</form>
+
+{% endblock %}

@@ -16,7 +16,7 @@ def select_all():
     results = run_sql(sql)
 
     for result in results:
-        member = Member(result["name"], result["age"], result["address"], result["phone_number"])
+        member = Member(result["name"], result["age"], result["address"], result["phone_number"], result["id"])
         members.append(member)
     return members
 

@@ -16,7 +16,7 @@ def select_all():
     sql = "SELECT * FROM sport_classes"
     results = run_sql(sql)
     for result in results:
-        sport_class = Sport_class(result["name"], result["date"], result["duration"])
+        sport_class = Sport_class(result["name"], result["date"], result["duration"], result["id"])
         sport_classes.append(sport_class)
     return sport_classes
 
@@ -24,7 +24,7 @@ def select(id):
     sql = "SELECT * FROM sport_classes WHERE id=%s"
     values = [id]
     result = run_sql(sql,values)[0]
-    sport_class = Sport_class(result["name"], result["date"], result["duration"])
+    sport_class = Sport_class(result["name"], result["date"], result["duration"], result["id"])
     return sport_class
 
 def update(sport_class):

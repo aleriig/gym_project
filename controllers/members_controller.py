@@ -13,7 +13,7 @@ def members():
 
 @members_blueprint.route("/members/new")
 def new_member():
-    return render_template("member/new.html")
+    return render_template("members/new.html")
 
 @members_blueprint.route("/members", methods=["POST"])
 def create_member():
@@ -36,7 +36,7 @@ def update_member(id):
     age = request.form["age"]
     address = request.form["address"]
     phone_number = request.form["phone_number"]
-    member = Member(name, age, address, phone_number)
+    member = Member(name, age, address, phone_number, id)
     member_repository.update(member)
     return redirect("/members")
 

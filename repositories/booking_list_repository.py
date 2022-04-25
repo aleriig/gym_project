@@ -34,7 +34,7 @@ def select(id):
 
 def update(booking_list):
     sql = "UPDATE booking_lists SET (member_id, sport_class_id) = (%s, %s) WHERE id = %s"
-    values = [booking_list.member.id, booking_list.sport_class.id]
+    values = [booking_list.member.id, booking_list.sport_class.id, booking_list.id]
     run_sql(sql, values) 
 
 

@@ -50,8 +50,5 @@ booking_list_repository.save(booking_list_1)
 booking_list_2 = Booking_list(member_5, sport_class_5)
 booking_list_repository.save(booking_list_2)
 
-# booking_list_3 = Booking_list(member_4, sport_class_5)
-# booking_list_repository.add_members_to_sport_class(booking_list_3)
-
 booking_list_3 = Booking_list(member_4, sport_class_5)
 booking_list_repository.save(booking_list_3)

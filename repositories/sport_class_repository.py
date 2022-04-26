@@ -31,3 +31,12 @@ def update(sport_class):
     sql = "UPDATE sport_classes SET (name, date, duration) = (%s, %s, %s) WHERE id = %s"
     values = [sport_class.name, sport_class.date, sport_class.duration, sport_class.id]
     run_sql(sql, values)
+
+# def delete_all():
+#     sql = "DELETE FROM sport_classes"
+#     run_sql(sql)
+
+# def delete(id):
+#     sql = "DELETE FROM sport_classes WHERE id = %s"
+#     values = [id]
+#     run_sql(sql, values)

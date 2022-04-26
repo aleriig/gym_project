@@ -1,4 +1,3 @@
-from crypt import methods
 from flask import Blueprint, Flask, redirect, render_template, request
 
 from models.booking_list import Booking_list
@@ -17,7 +16,7 @@ def booking_lists():
 def new_booking():
     members = member_repository.select_all()
     sport_classes = sport_class_repository.select_all()
-    return render_template("/booking_lists/new.html", members=members, sport_classes=sport_classes)
+    return render_template("booking_lists/new.html", members=members, sport_classes=sport_classes)
 
 @booking_lists_blueprint.route("/booking_lists", methods= ["POST"])
 def create_booking():
@@ -34,7 +33,7 @@ def edit_booking(id):
     booking_list = booking_list_repository.select(id)
     members = member_repository.select_all()
     sport_classes = sport_class_repository.select_all()
-    return render_template("/booking_lists/edit.html", booking_list=booking_list, members=members, sport_classes=sport_classes)
+    return render_template("booking_lists/edit.html", booking_list=booking_list, members=members, sport_classes=sport_classes)
 
 @booking_lists_blueprint.route("/booking_lists/<id>", methods=["POST"])
 def update_booking(id):
@@ -45,3 +44,6 @@ def update_booking(id):
     booking = Booking_list(member, sport_class, id)
     booking_list_repository.update(booking)
     return redirect("/booking_lists")
+
+# @booking_lists_blueprint.route("/booking_lists/<id>/delete" methods = ["POST"])
+# def delete_

@@ -20,7 +20,8 @@ def create_sport_class():
     name = request.form['name']
     date = request.form["date"]
     duration = request.form["duration"]
-    new_sport_class = Sport_class(name, date, duration)
+    capacity = request.form["capacity"]
+    new_sport_class = Sport_class(name, date, duration, capacity)
     sport_class_repository.save(new_sport_class)
     return redirect("/sport_classes")
 
@@ -34,6 +35,7 @@ def update_sport_class(id):
     name = request.form["name"]
     date = request.form["date"]
     duration = request.form["duration"]
-    sport_class = Sport_class(name, date, duration, id)
+    capacity = request.form["capacity"]
+    sport_class = Sport_class(name, date, duration, capacity, id)
     sport_class_repository.update(sport_class)
     return redirect("/sport_classes")

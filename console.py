@@ -29,19 +29,19 @@ member_repository.save(member_4)
 member_5 = Member("Peter Smith", 18, "13 Royal Mile", "0832879142")
 member_repository.save(member_5)
 
-sport_class_1 = Sport_class("TRX", "24/04/2022", 20 )
+sport_class_1 = Sport_class("TRX", "24/04/2022", 20, 2 )
 sport_class_repository.save(sport_class_1)
 
-sport_class_2 = Sport_class("Body-building", "24/04/2022", 60 )
+sport_class_2 = Sport_class("Body-building", "24/04/2022", 60, 4)
 sport_class_repository.save(sport_class_2)
 
-sport_class_3 = Sport_class("HIIT", "28/04/2022", 20 )
+sport_class_3 = Sport_class("HIIT", "28/04/2022", 20, 3)
 sport_class_repository.save(sport_class_3)
 
-sport_class_4 = Sport_class("Spinning", "28/04/2022", 45 )
+sport_class_4 = Sport_class("Spinning", "28/04/2022", 45, 2)
 sport_class_repository.save(sport_class_4)
 
-sport_class_5 = Sport_class("Yoga", "01/05/2022", 50 )
+sport_class_5 = Sport_class("Yoga", "01/05/2022", 50, 3)
 sport_class_repository.save(sport_class_5)
 
 booking_list_1 = Booking_list(member_2, sport_class_3)

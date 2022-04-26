@@ -14,7 +14,8 @@ CREATE TABLE sport_classes (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
     date VARCHAR(225),
-    duration INT
+    duration INT,
+    capacity INT
     );
 
 CREATE TABLE booking_lists (

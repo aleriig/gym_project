@@ -9,52 +9,51 @@
 </head>
 <body>
     <header>
-        
         <center><h1>Fit a Goal App</h1></center>
+    </header>
+        <main>
         <nav>
             <ul class="menu">
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/members">Membership</a> 
-                    <ul>
+            <div class="wrapper">
+                <div>
+                    <a href="/"><h4>Home</h4></a>
+                </div>
+                <div>
+                    <h4>Membership </h4>
                         <li>
                             <a href="/members">Current members</a>
                         </li>
                         <li>
                             <a href="/members/new">New member</a>
                         </li>
-                    </ul>
-                </li>
-                <li>
-                    Sport class
-                    <ul>
+                </div>
+                <div>
+                    <h4>Sport class</h4>
                         <li>
                             <a href="/sport_classes">Upcoming classes</a>
                         </li>
                         <li>
                             <a href="/sport_classes/new">New sport class</a>
                         </li>
-                    </ul>
-                </li>
-                <li>
-                    Bookings
-                    <ul>
-                        <li>
-                            <a href="/booking_lists">All bookings</a>
-                        </li>
-                        <li>
-                            <a href="/booking_lists/new">New booking</a>
-                        </li>
-                    </ul>
-                </li>
+                </div>
+                <div>
+                    <h4>Bookings</h4>
+                            <li>
+                                <a href="/booking_lists">All bookings</a>
+                            </li>
+                            <li><a href="/booking_lists/new">New booking</a>
+                            </li>
+                </div>
+            </div>
             </ul>
         </nav>
-    </header>
-    <div class="container">
+        </main>
+    <!-- <div class="container"> -->
         {% block content %}
         {% endblock %}
     </div>
 </body>
+<footer>
+    <p> &copy; 2022 Fit a Goal</p>
+</footer>
 </html>

@@ -6,10 +6,13 @@
 {% for member in members %}
 
 <section>
-    <h3>{{ member.name }}</h3>
-    <h5>Age:{{member.age}}, Address:{{member.address}}, Phone number:{{member.phone_number}}</h5>
-    <a href="/members/{{ member.id }}/edit">Edit</a>
-    <form action="/members/{{ member.id }}"></form>
+    <div class="container_member">
+        <h3>{{ member.name }}</h3>
+        <h5>Age:{{member.age}}, Address:{{member.address}}, Phone number:{{member.phone_number}}</h5>
+        <a href="/members/{{ member.id }}/edit">Edit</a>
+        <form action="/members/{{ member.id }}"></form>
+    </div>
+    
 </section>
 
 {% endfor %}

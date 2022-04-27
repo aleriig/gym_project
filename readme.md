@@ -1,0 +1,1 @@
+This app was created using Python language in Flask. It is useful to manage and create new users and new classes for a gym business.

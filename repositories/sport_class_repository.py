@@ -33,6 +33,4 @@ def update(sport_class):
     values = [sport_class.name, sport_class.date, sport_class.duration, sport_class.capacity, sport_class.id]
     run_sql(sql, values)
 
-def max_capacity(id):
-    capacity = []
-    sql = "SELECT * FROM sport classes WHERE id = %s"
+

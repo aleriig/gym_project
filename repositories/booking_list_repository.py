@@ -37,17 +37,4 @@ def update(booking_list):
     values = [booking_list.member.id, booking_list.sport_class.id, booking_list.id]
     run_sql(sql, values) 
 
-# def delete_all():
-#     sql = "DELETE FROM booking_lists"
-#     run_sql(sql)
-
-# def delete(id):
-#     sql = "DELETE FROM booking_lists WHERE id = %s"
-#     values = [id]
-#     run_sql(sql, values)
-
-def check_space(id):
-    sql = "RETURN * WHERE booking_list_id = %s"
-    values = [id]
-    run_sql(sql, values)[0]
 

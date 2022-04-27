@@ -13,6 +13,7 @@ body {
 
 footer {
     background-color: #9ab3f7;
+    border-radius: 10px;
 }
 
 div {
@@ -23,29 +24,15 @@ div {
 
 .menu {
     background-color: #9ab3f7;
-    
+    border-radius: 10px;  
 }
 
 .wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    
+    grid-template-columns: 1fr 1fr 1fr 1fr;    
 }
 
-.container_member {
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-template-rows: 1fr 1fr;
-    justify-content: flex-start;
-    background-color: #9ab3f7;
-}
-
-#my_list tr:nth-child(odd) {
-    background-color: #DDD;
-    color:#777
-}
-
-#my_list tr:nth-child(even) {
-    background-color: #666;
-    color:#FFF;
+.container {
+    background-color: #cbeed7;
+    border-radius: 10px;    
 }

@@ -6,7 +6,7 @@
 {% for sport_class in sport_classes %}
 
 <section>
-    <div class="container_member">
+    <div class="container">
         <h3>{{ sport_class.name }}</h3>
         <h5>Date:{{sport_class.date}}, Duration:{{sport_class.duration}}, Capacity:{{sport_class.capacity}}</h5>
         <a href="/sport_classes/{{ sport_class.id }}/edit">Edit</a>

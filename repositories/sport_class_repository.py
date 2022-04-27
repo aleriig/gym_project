@@ -1,3 +1,4 @@
+from optparse import Values
 from db.run_sql import run_sql
 from models.sport_class import Sport_class
 from models.member import Member
@@ -32,11 +33,6 @@ def update(sport_class):
     values = [sport_class.name, sport_class.date, sport_class.duration, sport_class.capacity, sport_class.id]
     run_sql(sql, values)
 
-# def delete_all():
-#     sql = "DELETE FROM sport_classes"
-#     run_sql(sql)
-
-# def delete(id):
-#     sql = "DELETE FROM sport_classes WHERE id = %s"
-#     values = [id]
-#     run_sql(sql, values)
+def max_capacity(id):
+    capacity = []
+    sql = "SELECT * FROM sport classes WHERE id = %s"

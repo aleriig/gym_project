@@ -46,4 +46,8 @@ def update(booking_list):
 #     values = [id]
 #     run_sql(sql, values)
 
+def check_space(id):
+    sql = "RETURN * WHERE booking_list_id = %s"
+    values = [id]
+    run_sql(sql, values)[0]
 

@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Fit a Goal App</title>
 </head>
 <body>
     <header>
-        <h1>Fit a Goal App</h1>
+        
+        <center><h1>Fit a Goal App</h1></center>
         <nav>
             <ul class="menu">
                 <li>
                     <a href="/">Home</a>
                 </li>
                 <li>
-                    Membership
+                    <a href="/members">Membership</a> 
                     <ul>
                         <li>
                             <a href="/members">Current members</a>
@@ -37,7 +39,7 @@
                     </ul>
                 </li>
                 <li>
-                    Booking list
+                    Bookings
                     <ul>
                         <li>
                             <a href="/booking_lists">All bookings</a>

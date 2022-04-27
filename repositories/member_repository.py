@@ -32,11 +32,3 @@ def update(member):
     values = [member.name, member.age, member.address, member.phone_number, member.id]
     run_sql(sql,values)
 
-# def delete_all()
-# sql = "DELETE FROM booking_lists"
-# run_sql(sql)
-
-# def delete(id):
-#     sql = "DELETE FROM booking_lists WHERE id = %s"
-#     values = [id]
-#     run_sql(sql,values)

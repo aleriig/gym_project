@@ -3,11 +3,20 @@
 
 <h2>Members</h2>
 
+{% set counter = namespace(element = 2) %}
 
 {% for member in members %}
 
+    {% if counter.element is divisibleby 2 %}
+        {% set dynamic_class = "even" %}
+    {% else %}
+        {% set dynamic_class = "odd" %}
+    {% endif %}
+
+    {% set counter.element = counter.element + 1 %}
+
 <section>
-    <div class="container">
+    <div class="container {{ dynamic_class }}">
         <h3>{{ member.name }}</h3>
         <h5>Age:{{member.age}}, Address:{{member.address}}, Phone number:{{member.phone_number}}</h5>
         <a href="/members/{{ member.id }}/edit">Edit</a>

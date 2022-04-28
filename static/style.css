@@ -36,3 +36,11 @@ div {
     background-color: #cbeed7;
     border-radius: 10px;    
 }
+
+.odd {
+    background-color: lightblue;
+}
+
+.even {
+    background-color: lightcoral;
+}
